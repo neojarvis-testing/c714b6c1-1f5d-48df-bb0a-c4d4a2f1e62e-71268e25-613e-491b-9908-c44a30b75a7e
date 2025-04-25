@@ -29,6 +29,7 @@ public class Base {
         try {
             loadProperties = new LoadProperties();
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-notifications");
             driver = new RemoteWebDriver(new URL(loadProperties.getProperty("gridurl")), options);
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
