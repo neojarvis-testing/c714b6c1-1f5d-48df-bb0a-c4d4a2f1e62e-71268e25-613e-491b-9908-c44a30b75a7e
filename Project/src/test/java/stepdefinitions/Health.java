@@ -1,12 +1,12 @@
 package stepdefinitions;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
-
+ 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HealthActions;
-
+ 
 public class Health {
  ExtentTest test= Hooks.report.createTest("Healthy Library");
  HealthActions healthObj = new HealthActions(test);
@@ -15,9 +15,9 @@ public class Health {
  * - MethodName - im_on_cleveland_clinic_website
  * - Description - Initializes the test scenario by navigating to the Cleveland Clinic website.
  */
-    @Given("Im on Cleveland Clinic Website")
+    @Given("Im on Cleveland Clinic Website.")
 public void im_on_cleveland_clinic_website() {
-    
+   
 }
 /**
  * - Author - Hrushikesh

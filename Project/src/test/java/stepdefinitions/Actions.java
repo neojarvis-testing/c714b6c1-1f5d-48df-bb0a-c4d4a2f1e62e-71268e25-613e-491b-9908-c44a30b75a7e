@@ -1,12 +1,12 @@
 package stepdefinitions;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
-
+ 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.ActionsActions;
-
+ 
 public class Actions {
 ExtentTest test= Hooks.report.createTest("Red Eye");
 ActionsActions actionsObj= new ActionsActions(test);
@@ -15,9 +15,9 @@ ActionsActions actionsObj= new ActionsActions(test);
  * - MethodName - im_on_cleveland_clinic_webpage
  * - Description - Initializes the test scenario by navigating to the Cleveland Clinic webpage.
  */
-@Given("Im on Cleveland Clinic Webpage")
+@Given("Im on Cleveland Clinic Webpage.")
 public void im_on_cleveland_clinic_webpage() {
-    
+   
 }
 /**
  * - Author - Hrushikesh
@@ -128,5 +128,4 @@ public void i_click_on_virtual_visits() {
 public void i_click_on_cleveland_logo() {
   actionsObj.clickonCleveImg();
 }
-
 }

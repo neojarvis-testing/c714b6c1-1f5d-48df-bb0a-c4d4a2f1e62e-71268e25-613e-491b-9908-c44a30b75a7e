@@ -1,15 +1,15 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.ActionsPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.WebDriverHelper;
-
+ 
 public class ActionsActions {
 public WebDriverHelper helper;
     ExtentTest test;
@@ -143,7 +143,7 @@ public WebDriverHelper helper;
             LoggerHandler.error("Finance not clicked");
             test.log(Status.FAIL, "Finance not clicked");
             Reporter.attachScreenshotToReport("Finance", test,"Finance Screenshot");
-        } 
+        }
     }
  
     /*
@@ -231,7 +231,7 @@ public WebDriverHelper helper;
             LoggerHandler.error("Refer a Patient not clicked");
             test.log(Status.FAIL, "Refer a Patient notclicked");
             Reporter.attachScreenshotToReport("Refer", test,"Refer Screenshot");
-        } 
+        }
     }
  
     /*
@@ -253,7 +253,7 @@ public WebDriverHelper helper;
             LoggerHandler.error("Phone Directory not clicked");
             test.log(Status.FAIL, "Phone Directory notclicked");
             Reporter.attachScreenshotToReport("Phone", test,"Phone Screenshot");
-        } 
+        }
     }
  
     /*
@@ -275,7 +275,7 @@ public WebDriverHelper helper;
             LoggerHandler.error("Virtual Second Opinions not clicked");
             test.log(Status.FAIL, "Virtual Second Opinions notclicked");
             Reporter.attachScreenshotToReport("SecondOpi", test,"SecondOpi Screenshot");
-        } 
+        }
     }
  
     /*

@@ -1,15 +1,14 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.HealthPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
-import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 public class HealthActions {
 public WebDriverHelper helper;
     ExtentTest test;
@@ -23,7 +22,7 @@ public WebDriverHelper helper;
  * Parameter List:
  *   - ExtentTest test: Instance of ExtentTest for logging and reporting.
  */
-
+ 
     public HealthActions(ExtentTest test){
         helper= new WebDriverHelper(Base.driver);
         this.test=test;
@@ -127,8 +126,6 @@ public WebDriverHelper helper;
             LoggerHandler.info("Clicked on RedEye");
             test.log(Status.INFO, "Clicked on RedEye");
             test.log(Status.PASS,"Clicked on RedEye");
-            Screenshot.takeScreenshot("RedEye");
-            Reporter.attachScreenshotToReport("RedEye", test, "RedEye");
         }catch(Exception e){
             LoggerHandler.error("Clicked on RedEye failed");
             test.log(Status.FAIL,"Clicked on RedEye failed");
