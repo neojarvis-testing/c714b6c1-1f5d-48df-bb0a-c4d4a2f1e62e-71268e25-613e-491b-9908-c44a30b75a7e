@@ -1,4 +1,5 @@
 package utils;
+
 import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;

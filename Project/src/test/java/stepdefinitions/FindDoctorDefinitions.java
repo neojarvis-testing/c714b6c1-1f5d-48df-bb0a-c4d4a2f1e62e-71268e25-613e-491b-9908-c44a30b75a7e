@@ -16,7 +16,7 @@ public class FindDoctorDefinitions {
     WebDriver driver = Base.driver;
     static ExtentTest test = Hooks.report.createTest("Test Find Doctor");
     FindDoctorActions fda;
-    @Given("I am on ClevelandClinic Page")
+    @Given("Nikhith is on ClevelandClinic Page")
     public void i_am_on_cleveland_clinic_page() {
         fda = new FindDoctorActions(driver, test);
     }
@@ -43,3 +43,7 @@ public class FindDoctorDefinitions {
         fda.enterLanguage(string);
     }
 }
+
+
+
+

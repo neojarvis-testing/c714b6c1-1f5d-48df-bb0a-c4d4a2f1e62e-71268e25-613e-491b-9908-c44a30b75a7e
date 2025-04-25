@@ -1,7 +1,7 @@
-Feature: ClevelandClinic 
-
+Feature: ClevelandClinic
+ 
 Scenario: Schedule Now
-Given I am on Cleveland Clinic Page
+Given Nikhith is on Cleveland Clinic Page
 When I click on schedule now and verify "Appointments | Cleveland Clinic"
 And I click on request appointment and verify "Request an Appointment | Cleveland Clinic"
 And I click on Get Started and verify text "Who is this request for?"
@@ -23,9 +23,9 @@ And I click on next
 And I verfiy text "Tell us about your appointment needs." and enter reason "I am scheduling this appointment to consult regarding a persistent cough and cold that I have been experiencing for the past week."
 And I click on next
 And I verify text "Tell us about your appointment needs (cont.)." and I capture screenshot "Tell us about your appointment needs (cont.)."
-
+ 
 Scenario Outline: Find Doctor
-Given I am on ClevelandClinic Page
+Given Nikhith is on ClevelandClinic Page
 When I click on Find Doctor
 And I click on search bar and enter "<input>"
 And I enter location "<location>" and click on it

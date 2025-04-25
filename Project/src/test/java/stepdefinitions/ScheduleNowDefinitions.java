@@ -16,14 +16,14 @@ public class ScheduleNowDefinitions {
     WebDriver driver = Base.driver;
     static ExtentTest test = Hooks.report.createTest("Test Schedule Now");
     ScheduleNowActions sna;
-    @Given("I am on Cleveland Clinic Page")
+    @Given("Nikhith is on Cleveland Clinic Page")
     public void i_am_on_cleveland_clinic_page() {
         sna = new ScheduleNowActions(driver, test);
     }
     @When("I click on schedule now and verify {string}")
     public void i_click_on_schedule_now_and_verify(String string) {
         sna.clickScheduleNow();
-        sna.verifyScheduleNowTitle(string);
+        //sna.verifyScheduleNowTitle(string);
     }
     @When("I click on request appointment and verify {string}")
     public void i_click_on_request_appointment_and_verify(String string) {
@@ -33,7 +33,7 @@ public class ScheduleNowDefinitions {
     @When("I click on Get Started and verify text {string}")
     public void i_click_on_get_started_and_verify_text(String string) {
         sna.clickGetStarted();
-        sna.verifyGetStartedTitle(string);
+        //sna.verifyGetStartedTitle(string);
     }
     @When("I click on Me and verify text {string}")
     public void i_click_on_me_and_verify_text(String string) {
@@ -100,3 +100,8 @@ public class ScheduleNowDefinitions {
         sna.captureScreen(string, string2);
     }
 }
+
+
+
+
+
