@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class ForProvidersPageLocators {
     public static By forproviders = By.className("content-block__title");
     public static By JoinOurNursing = By.id("join-our-nursing-tea");

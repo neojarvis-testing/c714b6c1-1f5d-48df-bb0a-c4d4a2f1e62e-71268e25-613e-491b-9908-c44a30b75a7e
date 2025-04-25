@@ -1,8 +1,10 @@
 package pages;
-
+ 
+import org.openqa.selenium.WebDriver;
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.HealthLibraryPageLocators;
 import utils.Assertion;
 import utils.Base;
@@ -10,17 +12,17 @@ import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 public class HealthLibraryPageActions {
     public WebDriverHelper helper;
     public Assertion pa;
     ExtentTest test;
-
+ 
     public HealthLibraryPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         pa = new Assertion(Base.driver);
         this.test = test;
-
+ 
     }
     /*
      * a. MethodName: health
@@ -29,7 +31,7 @@ public class HealthLibraryPageActions {
      * d. Parameters: None
      * e. Return Type: void
      */
-
+ 
     public void health() {
         try {
             helper.scrollToAnElement(HealthLibraryPageLocators.HealthHeading);
@@ -46,7 +48,7 @@ public class HealthLibraryPageActions {
      * d. Parameters: None
      * e. Return Type: void
      */
-
+ 
     public void diseases() {
         try {
             helper.clickByLocator(HealthLibraryPageLocators.Diseases);
@@ -59,7 +61,7 @@ public class HealthLibraryPageActions {
             LoggerHandler.info("Clicked on home");
             test.log(Status.INFO, "Clicked on home");
             test.log(Status.PASS, "Clicked on home");
-
+ 
         } catch (Exception e) {
             LoggerHandler.error("Clicked on Diseases Failed");
             test.log(Status.FAIL, "Clicked on Diseases Failed");
@@ -68,7 +70,7 @@ public class HealthLibraryPageActions {
             Reporter.attachScreenshotToReport("Diseases failed", test, "Diseases failed");
         }
     }
-
+ 
     /*
      * a. MethodName: diagnostics
      * b. AuthorName: Arun Kumar
@@ -76,7 +78,7 @@ public class HealthLibraryPageActions {
      * d. Parameters: None
      * e. Return Type: void
      */
-
+ 
     public void diagnostics() {
         try {
             helper.scrollToAnElement(HealthLibraryPageLocators.HealthHeading);
@@ -97,7 +99,7 @@ public class HealthLibraryPageActions {
             Reporter.attachScreenshotToReport("Diagnostics failed", test, "Diagnostics failed");
         }
     }
-
+ 
     /*
      * a. MethodName: treatments
      * b. AuthorName: Arun Kumar
@@ -124,7 +126,7 @@ public class HealthLibraryPageActions {
             Reporter.attachScreenshotToReport("Treatments failed", test, "Treatments failed");
         }
     }
-
+ 
     /*
      * a. MethodName: organs
      * b. AuthorName: Arun Kumar
@@ -151,7 +153,7 @@ public class HealthLibraryPageActions {
             Reporter.attachScreenshotToReport("BodySystems failed", test, "BodySystems failed");
         }
     }
-
+ 
     /*
      * a. MethodName: drugs
      * b. AuthorName: Arun Kumar
@@ -159,7 +161,7 @@ public class HealthLibraryPageActions {
      * d. Parameters: None
      * e. Return Type: void
      */
-
+ 
     public void drugs() {
         try {
             helper.clickByLocator(HealthLibraryPageLocators.DrugsDevices);

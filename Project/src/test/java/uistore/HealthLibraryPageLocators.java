@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class HealthLibraryPageLocators {
     public static By home=By.xpath("//a[text()='Home']");
     public static By HealthHeading=By.xpath("//div[text()='Health Library']");
@@ -10,5 +10,5 @@ public class HealthLibraryPageLocators {
     public static By Treatments=By.cssSelector("a[title='Treatments']");
     public static By BodySystems=By.cssSelector("a[title='Body Systems & Organs']");
     public static By DrugsDevices=By.cssSelector("a[title='Drugs, Devices & Supplements']");
-
+ 
 }

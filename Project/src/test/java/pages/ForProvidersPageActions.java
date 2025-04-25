@@ -1,24 +1,24 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.ForProvidersPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
-
+ 
 import utils.WebDriverHelper;
-
+ 
 public class ForProvidersPageActions {
     ExtentTest test;
     WebDriverHelper helper;
-
+ 
     public ForProvidersPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
     }
-
+ 
     /*
      * a. MethodName: forProviders
      * b. AuthorName: Arun Kumar
@@ -36,7 +36,7 @@ public class ForProvidersPageActions {
             LoggerHandler.error("Scrolled failed till forproviders");
         }
     }
-
+ 
     /*
      * a. MethodName: join
      * b. AuthorName: Arun Kumar
@@ -50,12 +50,12 @@ public class ForProvidersPageActions {
             LoggerHandler.info("Clicked on JoinOurNursing");
             test.log(Status.INFO, "Clicked on JoinOurNursing");
             test.log(Status.PASS, "Clicked on JoinOurNursing");
-
+ 
             helper.clickByLocator(ForProvidersPageLocators.clevelandcliniclink);
             LoggerHandler.info("Clicked on clevelandcliniclink");
             test.log(Status.INFO, "Clicked on clevelandcliniclink");
             test.log(Status.PASS, "Clicked on clevelandcliniclink");
-
+ 
             helper.switchToNewTab();
             LoggerHandler.info("Switched to new tab");
             test.log(Status.INFO, "Switched to new tab");
@@ -74,7 +74,7 @@ public class ForProvidersPageActions {
             Reporter.attachScreenshotToReport("JoinOurNursing Failed", test, "JoinOurNursing Failed");
         }
     }
-
+ 
     /*
      * a. MethodName: career
      * b. AuthorName: Arun Kumar
@@ -119,7 +119,7 @@ public class ForProvidersPageActions {
             test.log(Status.FAIL, "Clicked on Join Our Nursing Failed");
         }
     }
-
+ 
     /*
      * a. MethodName: patient
      * b. AuthorName: Arun Kumar
@@ -165,5 +165,4 @@ public class ForProvidersPageActions {
             test.log(Status.FAIL, "Clicked on Patient Failed");
         }
     }
-    
 }
