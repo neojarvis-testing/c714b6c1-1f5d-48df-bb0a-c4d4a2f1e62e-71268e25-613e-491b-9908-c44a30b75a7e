@@ -15,11 +15,11 @@ public class InstituteAndDepartmentActions {
     public static Assertion assertion;
     public static WebDriver driver;
     /**
-	 * @author 10831342 - Prithviraj Seth
-	 * Constructor Name : AppointmentPatientVisitorsActions
-	 * Description : It initializes WebDriverHelper
-	 * @param test
-	 */
+     * @author 10831342 - Prithviraj Seth
+     * Constructor Name : AppointmentPatientVisitorsActions
+     * Description : It initializes WebDriverHelper
+     * @param test
+     */
     public InstituteAndDepartmentActions(ExtentTest test) {
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
@@ -35,6 +35,8 @@ public class InstituteAndDepartmentActions {
         try {
             helper.waitForElementToBeVisible(InstituteAndDepartmentsPageLocators.instituteAndDepartment, 10);
             helper.clickByLocator(InstituteAndDepartmentsPageLocators.instituteAndDepartment);
+            assertion.verifyFullText("Institutes & Departments",
+            InstituteAndDepartmentsPageLocators.verifyInstituteAndDepartment);
             LoggerHandler.info("Clicked on Institute and Department");
             test.log(Status.INFO, "Clicked on Institute and Department");
             test.log(Status.PASS, "Clicked on Institute and Department");
@@ -56,6 +58,8 @@ public class InstituteAndDepartmentActions {
             helper.scrollByPixel(0, 3000);
             helper.waitForElementToBeVisible(InstituteAndDepartmentsPageLocators.bloodManagement, 10);
             helper.clickByLocator(InstituteAndDepartmentsPageLocators.bloodManagement);
+            // assertion.verifyFullText("Blood Management",
+            // InstituteAndDepartmentLocator.verifyBloodManagement);
             Screenshot.takeScreenshot("popup");
             Reporter.attachScreenshotToReport("popup", test, "popup");
             LoggerHandler.info("Clicked on Blood Management");
@@ -251,6 +255,8 @@ public class InstituteAndDepartmentActions {
         try {
             Base.driver.navigate().back();
             helper.clickByLocator(InstituteAndDepartmentsPageLocators.contactUs);
+            // assertion.verifyFullText("Phone Directory",
+            // InstituteAndDepartmentLocator.verifyPhoneDirectory);
             LoggerHandler.info("Clicked on Contact us");
             test.log(Status.INFO, "Clicked on Contact us");
             test.log(Status.PASS, "Clicked on Contact us");
@@ -309,6 +315,8 @@ public class InstituteAndDepartmentActions {
      */
     public void clickOnParking() {
         try {
+            // assertion.verifyFullText("Parking",
+            // InstituteAndDepartmentLocator.verifyParking);
             helper.clickByLocator(InstituteAndDepartmentsPageLocators.parking);
             LoggerHandler.info("click on parking");
             test.log(Status.INFO, "click on parking");
@@ -390,6 +398,8 @@ public class InstituteAndDepartmentActions {
         try {
             helper.waitForElementToBeVisible(InstituteAndDepartmentsPageLocators.virtualSecondOpinion, 10);
             helper.clickByLocator(InstituteAndDepartmentsPageLocators.virtualSecondOpinion);
+            assertion.verifyFullText("Virtual Second Opinions",
+            InstituteAndDepartmentsPageLocators.verifyVirtualSecondOpinion);
             LoggerHandler.info("Clicked on Virtual Second Opinion");
             test.log(Status.INFO, "Clicked on Virtual Second Opinion");
             test.log(Status.PASS, "Clicked on Virtual Second Opinion");
