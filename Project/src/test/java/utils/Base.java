@@ -7,6 +7,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
  
+/*
+     * Method Name: Base
+     * Author Name: Nikhith
+     * Description: This class contains the methods to open browser
+     * Return Type: void
+     * Parameter List: NA
+     */
 public class Base {
     public static WebDriver driver;
     public static LoadProperties loadProperties;
