@@ -14,7 +14,7 @@ And I click on Virtual Second Opinions
 And I click on Virtual Visits 
 Then I click on Cleveland Logo
  
-Scenario: Navigation Bar Health Library
+Scenario Outline: Navigation Bar Health Library
 Given Im on Cleveland Clinic Website.
 When I click on Health Library
 And I click on Body Systems and organs
