@@ -8,7 +8,7 @@ import utils.Base;
 import utils.LoggerHandler;
 public class FooterIcon {
     WebDriver driver = Base.driver;
-	public static ExtentTest test = Hooks.test;
+    public static ExtentTest test = Hooks.test;
     FooterIconPageActions footer;
 /*
  * Method Name: Asritha_is_on_Cleveland_clinic
@@ -17,7 +17,7 @@ public class FooterIcon {
  * Return Type: void
  * Parameter List: None
  */
-
+ 
  @Given("Asritha is on Cleveland clinic")
  public void asritha_is_on_cleveland_clinic() {
     footer = new FooterIconPageActions(driver,test);
@@ -127,5 +127,4 @@ public void i_click_on_snapchat_and_navigated() {
         LoggerHandler.error("Clicked on snapchat");
     }
 }
-
 }

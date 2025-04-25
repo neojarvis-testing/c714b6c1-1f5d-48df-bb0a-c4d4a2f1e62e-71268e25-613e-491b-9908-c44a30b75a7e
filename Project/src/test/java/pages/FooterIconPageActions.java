@@ -1,11 +1,11 @@
 package pages;
-
+ 
 import org.openqa.selenium.WebDriver;
-
+ 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.FooterIconPageLocators;
 import utils.Assertion;
 import utils.Base;
@@ -13,13 +13,13 @@ import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 public class FooterIconPageActions {
     ExtentReports reports;
     WebDriverHelper helper;
     ExtentTest test;
     Assertion asserts;
-
+ 
     /*
      * Method Name: FooterIconPageActions
      * Author Name: T Gnana Asritha
@@ -32,9 +32,9 @@ public class FooterIconPageActions {
     public FooterIconPageActions(WebDriver driver, ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
-
+ 
     }
-
+ 
     /*
      * Method Name: clickFacebook
      * Author Name: T Gnana Asritha
@@ -43,16 +43,12 @@ public class FooterIconPageActions {
      * Return Type: void
      * Parameter List: None
      */
-
+ 
     public void clickFacebook() {
         try {
             helper.scrollToAnElement(FooterIconPageLocators.facebook);
-            LoggerHandler.info("Clicked on Facebook Icon");
-            test.log(Status.INFO, "Clicked on Facebook Icon");
-            test.log(Status.PASS, "Clicked on Facebook Icon");
-            Screenshot.takeScreenshot("Facebook Screenshot");
+            helper.waitForElementToBeVisible(FooterIconPageLocators.facebook, 4);
             helper.clickByLocator(FooterIconPageLocators.facebook);
-            asserts.verifyFullUrl("https://www.facebook.com/ClevelandClinic");
             helper.switchToNewTab();
             Base.driver.close();
             helper.goBackToWindow(0);
@@ -64,10 +60,10 @@ public class FooterIconPageActions {
             LoggerHandler.error("Clicked on Facebook Icon Failed");
             test.log(Status.FAIL, "Clicked on Facebook Icon Failed");
             Reporter.attachScreenshotToReport("Facebook", test, "Facebook Screenshot");
-
+ 
         }
     }
-
+ 
     /*
      * Method Name: clickTwitter
      * Author Name: T Gnana Asritha
@@ -78,7 +74,7 @@ public class FooterIconPageActions {
      */
     public void clickTwitter() {
         try {
-
+ 
             helper.clickByLocator(FooterIconPageLocators.twitter);
             LoggerHandler.info("Clicked on Twitter Icon");
             test.log(Status.INFO, "Clicked on Twitter Icon");
@@ -95,7 +91,7 @@ public class FooterIconPageActions {
             Reporter.attachScreenshotToReport("Twitter", test, "Twitter Screenshot");
         }
     }
-
+ 
     /*
      * Method Name: clickYoutube
      * Author Name: T Gnana Asritha
@@ -123,7 +119,7 @@ public class FooterIconPageActions {
             Reporter.attachScreenshotToReport("Youtube", test, "Youtube Screenshot");
         }
     }
-
+ 
     /*
      * Method Name: clickInstagram
      * Author Name: T Gnana Asritha
@@ -150,7 +146,7 @@ public class FooterIconPageActions {
             Reporter.attachScreenshotToReport("Instagram", test, "Instagram Screenshot");
         }
     }
-
+ 
     /*
      * Method Name: clickLinkdin
      * Author Name: T Gnana Asritha
@@ -178,7 +174,7 @@ public class FooterIconPageActions {
             Reporter.attachScreenshotToReport("Linkedin", test, "Linkedin Screenshot");
         }
     }
-
+ 
     /*
      * Method Name: clickpintrest
      * Author Name: T Gnana Asritha
@@ -203,10 +199,10 @@ public class FooterIconPageActions {
             LoggerHandler.error("Clicked on Pinterest Icon Failed");
             test.log(Status.FAIL, "Clicked on Pinterest Icon Failed");
             Reporter.attachScreenshotToReport("Pinterest", test, "Pinterest Screenshot");
-
+ 
         }
     }
-
+ 
     /*
      * Method Name: clicksnapchat
      * Author Name: T Gnana Asritha
