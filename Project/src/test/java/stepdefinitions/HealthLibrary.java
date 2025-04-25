@@ -7,7 +7,7 @@ import pages.HealthLibraryPageActions;
  
 public class HealthLibrary {
      ExtentTest test;
-    HealthLibraryPageActions ha;
+    HealthLibraryPageActions health;
  
 /**
  * Method Name: i_am_on_cleveland_clinic
@@ -20,7 +20,7 @@ public class HealthLibrary {
 public void i_am_on_cleveland_clinic() {
     try{
         test=Hooks.report.createTest("test01");
-        ha=new HealthLibraryPageActions(test);
+        health=new HealthLibraryPageActions(test);
    }catch(Exception e){
     e.printStackTrace();
    }
@@ -36,7 +36,7 @@ public void i_am_on_cleveland_clinic() {
 @When("I scroll to health.")
 public void i_scroll_to_health() {
     try{
-       ha.health();
+       health.health();
    }catch(Exception e){
     e.printStackTrace();
    }
@@ -53,7 +53,7 @@ public void i_scroll_to_health() {
 @When("I click on diseases and conditions.")
 public void i_click_on_diseases_and_conditions() {
     try{
-        ha.diseases();
+        health.diseases();
  
    }catch(Exception e){
     e.printStackTrace();
@@ -70,7 +70,7 @@ public void i_click_on_diseases_and_conditions() {
 @When("I click on Diagnostics.")
 public void i_click_on_diagnostics() {
     try{
-        ha.diagnostics();
+        health.diagnostics();
  
    }catch(Exception e){
     e.printStackTrace();
@@ -86,7 +86,7 @@ public void i_click_on_diagnostics() {
 @When("I click on treatments.")
 public void i_click_on_treatments() {
     try{
-        ha.treatments();
+        health.treatments();
  
    }catch(Exception e){
     e.printStackTrace();
@@ -102,7 +102,7 @@ public void i_click_on_treatments() {
 @When("I click on  organs.")
 public void i_click_on_organs() {
     try{
-        ha.organs();
+        health.organs();
  
    }catch(Exception e){
     e.printStackTrace();
@@ -119,7 +119,7 @@ public void i_click_on_organs() {
 @When("I click on  drugs.")
 public void i_click_on_drugs() {
     try{
-        ha.drugs();
+        health.drugs();
  
    }catch(Exception e){
     e.printStackTrace();

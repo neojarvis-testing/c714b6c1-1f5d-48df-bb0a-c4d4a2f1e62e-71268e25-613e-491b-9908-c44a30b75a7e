@@ -12,7 +12,7 @@ import pages.ForProvidersPageActions;
  */
 public class ForProviders {
     ExtentTest test = Hooks.report.createTest("testcase02");
-    ForProvidersPageActions pa;
+    ForProvidersPageActions provide;
  
     /**
      * Method Name: i_am_on_cleveland_clin_home_page

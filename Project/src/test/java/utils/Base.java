@@ -1,5 +1,4 @@
 package utils;
-
 import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,7 @@ public class Base {
     LoggerHandler loggerHandler = new LoggerHandler();
      /*
      * Method Name: openBrowser
-     * Author Name: Nikhith
+     * Author Name: Arun Kumar
      * Description: This method initializes the WebDriver, sets browser options, and opens the specified URL.
      * Return Type: void
      * Parameter List: NA
