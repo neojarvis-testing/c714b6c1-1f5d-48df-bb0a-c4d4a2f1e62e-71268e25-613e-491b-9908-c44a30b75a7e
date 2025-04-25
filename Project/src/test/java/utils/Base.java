@@ -96,6 +96,7 @@ public class Base {
 
 }
 
+
 import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -131,3 +132,4 @@ public class Base {
         driver = new EventFiringDecorator<>(listener).decorate(driver);
     }
 }
+
